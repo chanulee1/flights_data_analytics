@@ -1,12 +1,33 @@
 # Project Background
-This project analyzes the on-time flight performance data of the air carriers that held over one percent of the industry's total domestic scheduled-service passenger revenues.
+This project analyzes the on-time flight performance data of the air carriers that held over one percent of the industry's total domestic scheduled-service passenger revenues in the US. This included the following 20 airlines:
+- AirTran Airways Corporation
+- Alaska Airlines Inc.
+- Aloha Airlines Inc.
+- American Airlines Inc.
+- American Eagle Airlines Inc.
+- Atlantic Southeast Airlines
+- Comair Inc.
+- Continental Air Lines Inc.
+- Delta Air Lines Inc.
+- Expressjet Airlines Inc.
+- Frontier Airlines Inc.
+- Hawaiian Airlines Inc.
+- JetBlue Airways
+- Mesa Airlines Inc.
+- Northwest Airlines Inc.
+- Pinnacle Airlines Inc.
+- Skywest Airlines Inc.
+- Southwest Airlines Co.
+- United Air Lines Inc.
+- US Airways Inc.
 
-Insights and recommendations are provided on the following key areas:
+Performance is evaluated based on two main areas: cancellations and arrival delays*.
 
-- **Category 1:** 
-- **Category 2:** 
-- **Category 3:** 
-- **Category 4:** 
+Insights are provided on the following key areas:
+
+- **Seasonal Patterns:** Changes in cancellation and delay volume based on the time of year.
+- **Cancellation Analysis:** Cancellation volume and rates by airline and airport, broken down by cause.
+- **Delay Analysis:** Delay volume and rates by airline and airport, broken down by cause.
 
 The SQL queries used to inspect and clean the data for this analysis can be found here [link].
 
@@ -14,32 +35,41 @@ Targeted SQL queries regarding various business questions can be found here [lin
 
 An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
 
-
+\***Note:** A flight is considered "delayed" if it arrived at least 15 minutes later than the scheduled arrival time. Thus, flights that arrived less than 15 minutes late are technically not "delayed", but these flights were still included in the delay time distribution analysis.
 
 # Data Structure & Initial Checks
 
-The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
-- **Table 2:**
-- **Table 3:**
-- **Table 4:**
-- **Table 5:**
+The database constructed for this project (MySQL) consists of three tables: flights_on_time_2007, carriers, airports, with a total row count of 7458082 records. A description of each table is as follows:
 
-[Entity Relationship Diagram here]
+- **flights_on_time_2007:** Flight records, including data such as the departure and arrival time, cancellation status, and delay times.
+- **carriers:** Air carrier records, including their codes and descriptions.
+- **airports:** Airport records, including their codes and locations.
 
+The following ER diagrams contain only the fields that are relevant to the analysis.
+![Database ER diagram (crow's foot) (1)](https://github.com/user-attachments/assets/d033e652-5dab-4502-8c95-bf1b7aa429d1)
 
 
 # Executive Summary
 
 ### Overview of Findings
 
-Explain the overarching findings, trends, and themes in 2-3 sentences here. This section should address the question: "If a stakeholder were to take away 3 main insights from your project, what are the most important things they should know?" You can put yourself in the shoes of a specific stakeholder - for example, a marketing manager or finance director - to think creatively about this section.
+#### Busy Seasons
+Although it varied across different airlines, the general seasonal patterns were as follows:
+- The number of flights remained relatively constant over the year, with small spikes during the summer and towards the beginning/end of the year.
+- The number of cancellations spiked during the spring and summer months, as well as towards the beginning/end of the year.
+- The number of delays also spiked during the spring and summer months, as well as towards the beginning/end of the year.
 
-[Visualization, including a graph of overall trends or snapshot of a dashboard]
+#### Airlines with the Best and Worst Cancellation Performance
+Based on cancellation rate, the worst-performing airline was **American Eagle Airlines Inc.**, which cancelled roughly **4.22%** of their flights in 2007 (540494 total flights). The best-performing airline was **Frontier Airlines Inc.**, with a cancellation rate of **0.41%** (97760 total flights).
 
+#### Airlines with the Best and Worst Delay Performance
+Based on delay rate, the worst-performing airline was **Atlantic Southeast Airlines**. Roughly **31.91%** of their flights in 2007 were delayed (286234 total flights). The best-performing airline was **Hawaiian Airlines Inc.**, with a delay rate of **6.29%** (56175 total flights).
 
+#### Best and Worst Airline Overall
+Ranking the airlines by taking a simple average of the cancellation and delay rates, the worst performing airline was **Atlantic Southeast Airlines**, with a score of roughly **0.175**. The best performing airline was **Hawaiian Airlines Inc.**, with a score of about **0.036**.
 
 # Insights Deep Dive
-### Category 1:
+### Seasonal Patterns:
 
 * **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
   
@@ -52,7 +82,7 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 [Visualization specific to category 1]
 
 
-### Category 2:
+### Cancellation Analysis:
 
 * **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
   
@@ -65,7 +95,7 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 [Visualization specific to category 2]
 
 
-### Category 3:
+### Delay Analysis:
 
 * **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
   
@@ -76,20 +106,6 @@ Explain the overarching findings, trends, and themes in 2-3 sentences here. This
 * **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
 
 [Visualization specific to category 3]
-
-
-### Category 4:
-
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-
-[Visualization specific to category 4]
-
 
 
 # Recommendations:
