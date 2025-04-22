@@ -71,43 +71,32 @@ Ranking the airlines by taking a simple average of the cancellation and delay ra
 # Insights Deep Dive
 ### Seasonal Patterns:
 
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Flight Trends.** As stated above, the volume of flights remained relatively constant throughout the year but was greatest during the summer months (June-August), reaching a peak of **148,276** flights during the week of **July 22**. The first week of the year had the lowest amount of flights, at only **121,534** flights.
   
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Cancellation Trends.** The number of cancellations was greatest between the winter and spring months (February-March), peaking at **11,351** cancellations (**269%** increase from the weekly average) during the week of **February 11**. It also increased during the summer and early winter months (December-January). It remained relatively low during the spring and fall, with its lowest point occuring in the week of **September 2** at only **1,103** cancellations.
   
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Delay Trends.** The number of delays followed a similar seasonal trend as the cancellations, increasing during the winter-to-spring transition, summer, and early winter months and remaining relatively low during the spring and fall. The peak was during the week of **December 23**, at **50,348** delays (**46%** increase from the weekly average). The low point was during the week of **October 28**, at **17,282** delays.
 
-[Visualization specific to category 1]
+![image](https://github.com/user-attachments/assets/daba183e-e23b-427c-8577-a93efd041f9a)
 
 
 ### Cancellation Analysis:
 
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Cancellation Cause Breakdown.** The vast majority of flight cancellations, totaling about **98.98%**, were caused by three main sources: air carriers (**41.54%**), weather (**38.53%**), and the National Aviation System (NAS) (**19.90%**). Cancellations due to air carriers were caused by variables that were under the control of the airlines, such as aircraft clearning, baggage loading, or fueling. Cancellations due to weather were caused by weather conditions, such as extreme temperatures, deicing aircraft, or lightning damage. Cancellations due to the NAS were caused by variables that were under the control of the Federal Aviation Administration (FAA), airport operators, or state/local officials. These include airport conditions, closed runways, and ramp congestion. See https://www.bts.gov/topics/airlines-and-airports/number-15-gate-departure-time for a full list of possible causes.
   
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-  
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Cancellation Cause Over Time.** The cancellation cause distributions change according to the time of year. The number of cancellations per week due to air carriers and the NAS seem to follow the trend in the volume of flights; both peak during the summer months when flight volume is at its highest. The cancellations caused by the weather saw massive increases during the winter-to-spring transition (February-March), roughly a **607%** increase from the average at its peak. This is likely due to the extreme weather caused by temperature collisions as winter gives way to spring, resulting in phenomena such as tornadoes, strong winds, and temperature swings. Another large increase, about **209%**, occured in the winter, probably due to the extreme cold and heavy snowfall.
 
-[Visualization specific to category 2]
+![image](https://github.com/user-attachments/assets/f389f19d-c86d-4172-a6ad-21e68aa1c974)
 
 
 ### Delay Analysis:
 
-* **Main insight 1.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Delay Cause Breakdown** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
   
-* **Main insight 2.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
+* **Delay Time Distribution** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
   
 * **Main insight 3.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
   
-* **Main insight 4.** More detail about the supporting analysis about this insight, including time frames, quantitative values, and observations about trends.
-
-[Visualization specific to category 3]
-
-
 # Recommendations:
 
 Based on the insights and findings above, we would recommend the [stakeholder team] to consider the following: 
